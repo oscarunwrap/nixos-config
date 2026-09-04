@@ -78,6 +78,17 @@
   #   ];
   # };
 
+  users.users.scully = {
+    isNormalUser = true;
+    description = "Scully";
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+  };
+
+  security.sudo.enable = true;
+
   # programs.firefox.enable = true;
 
   # List packages installed in system profile.
