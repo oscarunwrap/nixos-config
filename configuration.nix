@@ -48,7 +48,10 @@
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
-
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
   
 
   # Configure keymap in X11
