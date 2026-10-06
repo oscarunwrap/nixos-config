@@ -13,8 +13,6 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  programs.git.enable = true;
-
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.systemd-boot.configurationLimit = 10;
@@ -57,7 +55,6 @@
     enable32Bit = true;
   };
   
-
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
@@ -104,6 +101,10 @@
   #   vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #   wget
   # ];
+
+  # programs.nixarchy.allowUnfree = true;
+
+  programs.git.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

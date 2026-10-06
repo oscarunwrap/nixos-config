@@ -88,9 +88,9 @@
     # obsidian.enable = true;  #@ obsidian  # unfree — Preinstalled upstream, opt-in here because it is unfree. Theme syncing needs the Omarchy theme selected under Appearance > Themes in the app; omarchy-theme-set-obsidian writes it on every theme change. 
 
   # ── Utility ─────────────────────────────────────────────────────
-    # omacalc.enable = true;  #@ omacalc
+    omacalc.enable = true;  #@ omacalc
     # omacut.enable = true;  #@ omacut
-    # omawrite.enable = true;  #@ omawrite
+    omawrite.enable = true;  #@ omawrite
   };
 
   # ── Extra packages ──────────────────────────────────────────────
