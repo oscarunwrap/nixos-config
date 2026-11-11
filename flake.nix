@@ -6,7 +6,7 @@
       "github:NixOS/nixpkgs/nixos-unstable";
 
     nixarchy = {
-      url = "github:olafkfreund/nixarchy/v4.0.2-4";
+      url = "github:olafkfreund/nixarchy/release";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -23,6 +23,10 @@
         ./nixarchy-apps.nix
 
         {
+	  environment.systemPackages = [
+	    nixarchy.inputs.hyprland.inputs.hyprland-guiutils.packages.x86_64-linux.default
+	  ];
+
           programs.nixarchy = {
             enable = true;
             user = "scully";

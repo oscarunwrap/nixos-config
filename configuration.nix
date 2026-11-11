@@ -35,6 +35,10 @@
   # Set your time zone.
   time.timeZone = "America/Chicago";
 
+  # Temporary workaround for nixpkgs issue #573049.
+  security.wrappers.Hyprland.source =
+    lib.mkForce "${config.programs.hyprland.package}/bin/.Hyprland-wrapped";
+
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -60,7 +64,13 @@
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
 
   # Enable CUPS to print documents.
-  # services.printing.enable = true;
+  services.printing.enable = true;
+  services.printing.webInterface = true;
+  
+  # Discover printers on local network
+  services.avahi.enable = true;
+  services.avahi.nssmdns4 = true;
+  services.avahi.openFirewall = true;
 
   # Enable sound.
   # services.pulseaudio.enable = true;

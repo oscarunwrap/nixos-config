@@ -101,6 +101,7 @@
   # line before the end marker.
   environment.systemPackages = with pkgs; [  #@pkgs-begin
     grok-cli  #@pkg grok-cli
+    codex  #@pkg codex
   ];  #@pkgs-end
 }
 
